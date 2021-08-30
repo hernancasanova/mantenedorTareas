@@ -11,3 +11,5 @@ npm i
 ## Levantar la aplicación:
 npm start
 
+## Ejecutar los tests:
+npm test
