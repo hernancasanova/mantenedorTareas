@@ -38,7 +38,7 @@ const FormCreacion = () => {
               if (values.descripcion==="") {
                 errors.descripcion = 'La descripción es requerida';
               } else if (
-                true
+                values.fecha_creacion==="--"
               ) {
                 errors.fecha_creacion = 'La fecha de creación es requerida';
               }
@@ -55,7 +55,7 @@ const FormCreacion = () => {
             {props => (
               <form onSubmit={props.handleSubmit}>
                 <FormGroup>
-                  <Label for="descripcion">Descripcion</Label>
+                  <Label for="descripcion">Descripción</Label>
                   <Input
                     type="text"
                     onChange={(e)=>{cambiaDescripcion(e.target.value)}}
@@ -69,7 +69,7 @@ const FormCreacion = () => {
                 </span>}
                 </FormGroup>
                 <FormGroup>
-                  <Label for="fecha_creacion">Fecha Creacion</Label>
+                  <Label for="fecha_creacion">Fecha de creación</Label>
                   <Input
                     type="date"
                     onChange={(e)=>{cambiaFecha(e.target.value)}}
