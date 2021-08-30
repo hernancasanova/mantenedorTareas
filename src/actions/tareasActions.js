@@ -11,6 +11,10 @@ import {
     type: TAREA_REMOVE,
     payload: {id}
   });
+  export const reset = (id) => ({
+    type: RESET,
+    payload: id
+  });
   export  const tareaSeleccionada = (tarea) => ({
     type: TAREA_SELECCIONADA,
     payload: tarea
