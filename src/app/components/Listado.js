@@ -16,12 +16,11 @@ import * as actions from '../../actions/tareasActions';
 import FormCreacion from './FormCreacion';
 
 export function Listado(props) {
-  const tareas = useSelector(store=>store.tareas.tareas);
+  var tareas = useSelector(store=>store.tareas.tareas);
+  tareas=tareas.filter(tarea=>tarea.vigente===true)
   const dispatch = useDispatch();
 
   const tareaSeleccionada = (tarea) => {
-    console.log("tarea seleccionada: ",tarea);
-    //debugger;
     dispatch(actions.tareaSeleccionada(tarea))
   }
   const eliminarTarea = (id) => {
@@ -32,8 +31,8 @@ export function Listado(props) {
   }*/
   return (
     <Container>
-      <Row className="mt-8">
-        Listado de tareas
+      <Row style={{marginTop:30}}>
+        <h1>Listado de tareas</h1>
       </Row>
       <Row>
             <Col xs="6" md="6">

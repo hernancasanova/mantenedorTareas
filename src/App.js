@@ -15,6 +15,7 @@ function App(props) {
       <Switch>
         <Route exact path="/listado_tareas" component={Listado} />
         <Route exact path="/crear_tarea" component={FormCreacion} />
+        <Redirect to="/listado_tareas" />
       </Switch>
     </BrowserRouter>
   );
